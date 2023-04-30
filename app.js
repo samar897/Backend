@@ -23,7 +23,7 @@ app.get(
 );
 
 app.get("/hi", function (req, res) {
-  res.send("Welcome to Tuwaiq");
+  res.send("Welcome to Tuwaiq Samar Saleh");
 });
 
 app.get("/name", function (req, res) {
