@@ -5,8 +5,6 @@ const express = require("express");
 
 const app = express();
 
-
-
 //أحدى الدوال هي liseane فتحت منفذ عشان يسمع من خلال الكمبيوتر
 /*
 
@@ -18,7 +16,7 @@ const app = express();
 
 */
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
 //Step 4
 
@@ -27,16 +25,14 @@ app.get(
 
   function (req, res) {
     res.send("welcome to the javascript bootcamp");
-    
   }
 );
 
 app.get("/html", function (req, res) {
- // res.send("Welcome to Tuwaiq Samar Saleh");
+  // res.send("Welcome to Tuwaiq Samar Saleh");
 
   const Result = 100;
-    res.render("main.ejs",{Result2: Result});
-
+  res.render("main.ejs", { Result2: Result });
 });
 /*
 app.get("/name", function (req, res) {
