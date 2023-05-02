@@ -1,20 +1,55 @@
+<!-- views/home.ejs -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MainPage</title>
+    <meta charset="utf-8" />
+    <title>Node.js Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .jumbotron {
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
-    <% if (Result2 <= 0 ) { %>
-    <h2 style="background-color: brown">F</h2>
+    <div class="container">
+      <%- include('partials/navbar') %>
+      <div class="jumbotron">
+        <h1>All about Node</h1>
+        <p class="lead">Check out our articles below!</p>
+        <p>Welcome <%=res1 %> </p>
+        <br />
+        <P>The Student Grede is </P> <br />
+        <% if (Result2 <= 0 ) { %>
+        <h2 style="background-color: brown; width: 10px;" >F</h2>
 
-    <% } else if (Result2 <= 50 ) { %>
-    <h2 style="background-color: aquamarine">C</h2>
-    <% } else if (Result2 <= 75 ) { %>
-    <h2 style="background-color: blueviolet">B</h2>
-    <% } else if (Result2 <= 100 ) { %>
-    <h2 style="background-color: blueviolet">B</h2>
-    <% } else {%>
-    <h2 style="background-color: chartreuse">There is No Result</h2>
-    <% } %>
+        <% } else if (Result2 <= 50 ) { %>
+        <h2 style="background-color: rgb(255, 244, 127) ; width: 50;">C</h2>
+        <% } else if (Result2 <= 75 ) { %>
+        <h2 style="background-color: blueviolet ; width: 50px;">B</h2>
+        <% } else if (Result2 <= 100 ) { %>
+        <h2 style="background-color: rgb(0, 255, 208) ; width: 50px;">A</h2>
+        <% } else {%>
+        <h2 style="background-color: chartreuse; width: 50px;">There is No Result</h2>
+        <% } %>
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="list-group">
+            <!-- loop over blog posts and render them -->
+            LIST_OF_POSTS
+          </div>
+        </div>
+      </div>
+      <%- include('partials/footer') %>
+    </div>
   </body>
 </html>
