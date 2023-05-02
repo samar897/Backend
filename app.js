@@ -24,15 +24,15 @@ app.get(
   "/",
 
   function (req, res) {
-    res.send("welcome to the javascript bootcamp");
+    //res.send("welcome to the javascript bootcamp");
+    res.render("home.ejs");
   }
 );
 
 app.get("/html", function (req, res) {
   // res.send("Welcome to Tuwaiq Samar Saleh");
-
   const Result = 100;
-  res.render("main.ejs", { Result2: Result });
+  res.render("Main.ejs",{ Result2: Result });
 });
 /*
 app.get("/name", function (req, res) {
