@@ -12,8 +12,6 @@ const app = express();
 
 انتي بطلة سمر ورح توصلي مكان عالي عالي ان شاء الله 
 
-
-
 */
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
